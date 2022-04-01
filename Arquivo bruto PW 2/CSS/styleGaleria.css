@@ -1,0 +1,67 @@
+
+.card_img{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 25px;
+}
+.small_img{
+  height: 75%;
+  cursor: pointer;
+  transition: all linear 0.4s;
+}
+.small_img:hover{
+  filter: grayscale(50%);
+  transform: scale(1.1);
+}
+.row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#modelo_img{
+  width: 50vw;
+  transform:  scale(0);
+  transition: all linear 0.3s;
+}
+.modal_active #modelo_img{
+  transform:  scale(1);
+}
+.modelo{
+  position: fixed;
+  width: 100vw;
+  height: 150vh;
+  background-color: rgba(0, 0, 0, .7);
+  visibility: hidden;
+  z-index: 1;
+  opacity: 1;
+  transition: visibility 0.8s linear, opacity 1 linear;
+}
+.modelo_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#bt_close{
+  color: #FFF;
+  background-color: #000;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 25px;
+  border: solid 1px #FFF;
+  transition: all ease-out 0.4s;
+  cursor: pointer;
+}
+#bt_close:hover{
+  color: red;
+  border-radius: 10px;
+
+}
+.modal_active{
+  visibility: visible;
+  opacity: 1;
+
+}
